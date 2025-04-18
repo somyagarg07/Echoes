@@ -1,0 +1,643 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ECHOES</title>
+    <link
+      rel="icon"
+      type="image"
+      href="C:\Users\rakes\OneDrive\Books\html\website\6adb225f-77d4-4be5-a554-e481540b65f6.jpg"
+    />
+    <style>
+     
+      
+      .header {
+        background-color: rgb(165, 229, 188);
+        display: flex;
+      }
+      .h1 {
+        font-size: 30px;
+        font-family: cursive;
+      }
+      .imageheader {
+        margin-top: 15px;
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+      }
+      .left {
+        display: flex;
+        flex: 30%;
+      }
+      .right {
+        display: flex;
+      }
+      .right a {
+        text-decoration: none;
+        color: black;
+        margin-top: 30px;
+        font-size: 20px;
+      }
+      .right a:hover {
+        color: rgb(34, 122, 5);
+      }
+      .button {
+        height: 29px;
+        width: 79px;
+        border-radius: 10%;
+        font-size: 13px;
+        margin-top: 28px;
+        background-color: rgb(165, 229, 188);
+      }
+      .button:hover {
+        background-color: rgb(79, 179, 46);
+      }
+      .content1 {
+        display: flex;
+        margin-bottom: 0px;
+        background-color: rgb(165, 229, 188);
+      }
+      .left1 {
+        display: flex;
+        flex: 40%;
+      }
+      .left1 p {
+        font-size: 28px;
+        margin-left: 100px;
+        margin-top: 125px;
+      }
+      .left1 a {
+        text-decoration: none;
+        color: azure;
+      }
+      .right1 {
+        display: flex;
+        flex: 60%;
+        margin-top: 50px;
+        margin-right: 30px;
+      }
+      .right1 img {
+        height: 400px;
+        width: 650px;
+        margin-left: 200px;
+        margin-bottom: 50px;
+      }
+      .button1 {
+        height: 50px;
+        width: 300px;
+        background-color: black;
+        color: aliceblue;
+        font-size: 17px;
+        border-radius: 7%;
+        margin-left: 10px;
+      }
+
+      .content4 p {
+        font-size: 20px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .content4 h1 {
+        text-align: center;
+      }
+      .flip-container {
+        background-color: rgb(170, 214, 231);
+        display: flex;
+      }
+      .container1 {
+        background-color: transparent;
+        width: 400px;
+        height: 400px;
+        margin-left: 60px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border-radius: 10px;
+      }
+      .card1 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      .container1:hover .card1 {
+        transform: rotateY(180deg);
+      }
+      .card1front,
+      .card1back {
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        backface-visibility: hidden;
+      }
+      .card1front {
+        background-color: white;
+        color: white;
+      }
+      .card1back {
+        background-color: pink;
+        font-family: "Times New Roman", Times, serif;
+        color: black;
+        transform: rotateY(180deg);
+        border-radius: 10px;
+      }
+      .container2 {
+        background-color: transparent;
+        width: 400px;
+        height: 400px;
+        margin-left: 60px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border-radius: 10px;
+      }
+      .card2 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      .container2:hover .card2 {
+        transform: rotateY(180deg);
+      }
+      .card2front,
+      .card2back {
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        backface-visibility: hidden;
+      }
+      .card2front {
+        background-color: white;
+        color: white;
+      }
+      .card2back {
+        background-color: pink;
+        font-family: "Times New Roman", Times, serif;
+        color: black;
+        transform: rotateY(180deg);
+        border-radius: 10px;
+      }
+      .container3 {
+        background-color: transparent;
+        width: 400px;
+        height: 400px;
+        margin-left: 60px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border-radius: 10px;
+      }
+      .card3 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      .container3:hover .card3 {
+        transform: rotateY(180deg);
+      }
+      .card3front,
+      .card3back {
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        backface-visibility: hidden;
+      }
+      .card3front {
+        background-color: white;
+        color: white;
+      }
+      .card3back {
+        background-color: pink;
+        font-family: "Times New Roman", Times, serif;
+        color: black;
+        transform: rotateY(180deg);
+        border-radius: 10px;
+      }
+      .container4 {
+        background-color: transparent;
+        width: 400px;
+        height: 400px;
+        margin-left: 60px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin-right: 20px;
+        border-radius: 10px;
+      }
+      .card4 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+      .container4:hover .card4 {
+        transform: rotateY(180deg);
+      }
+      .card4front,
+      .card4back {
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        backface-visibility: hidden;
+      }
+      .card4front {
+        background-color: white;
+        color: white;
+      }
+      .card4back {
+        background-color: pink;
+        font-family: "Times New Roman", Times, serif;
+        color: black;
+        transform: rotateY(180deg);
+        border-radius: 10px;
+      }
+      .slide{
+        display: flex;
+      }
+      .slider {
+            position: relative;
+            overflow: hidden;
+            margin: auto;
+         
+            background-color: rgb(245, 203, 217);
+            height: 450px; 
+        }
+
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+        }
+        .slide_image1{
+          flex: 40%;
+          margin-top: 80px;
+         margin-left: 200px;
+        }
+        .slide_text1{
+          flex: 60%;
+          margin-top: 60px;
+          margin-right: 50px;
+          font-size: 17px;
+        }
+        .slide_image2{
+          flex: 40%;
+          margin-top: 80px;
+         margin-left: 200px;
+        }
+        .slide_text2{
+          flex: 60%;
+          margin-top: 60px;
+          margin-right: 50px;
+          font-size: 17px;
+        }
+        .footer {
+  background-color: #333;
+  color: #f4f4f9;
+  padding: 40px 20px;
+  text-align: center;
+  height: 300px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.contact-info, .translator {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.contact-info h3, .translator h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #f4f4f9;
+}
+
+.contact-info p, .translator p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #f4f4f9;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+
+.translator form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.translator input[type="email"] {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 4px;
+  border: none;
+  width: 60%;
+}
+
+.translator button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #f4f4f9;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.translator button:hover {
+  background-color: #ddd;
+}
+
+
+.footer-credit {
+  margin-top: 35px;
+  font-size: 0.9em;
+  color: #ccc;
+}
+.footer-image{
+  margin-top: 55px;
+}
+.translator{
+  margin-top: 40px;
+}
+  .contact-info{
+    margin-top: 40px;
+  }    
+    </style>
+  </head>
+  <body>
+    <div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 999;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', // Default page language is English
+                includedLanguages: 'en,hi,pa,bn,de,es,fa,fr,gu,it,ja,kn,ko,la,ne,nl,ur,pt,ru,tr,vi,te', // Include English, Hindi, and Punjabi
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div class="header">
+      <div class="left">
+        <h1 class="h1">Echoes</h1>
+        <img
+          class="imageheader"
+          src="C:\Users\rakes\OneDrive\Books\html\website\6adb225f-77d4-4be5-a554-e481540b65f6.jpg"
+        />
+      </div>
+      <div class="right">
+        <a href="C:\Users\rakes\HTML\translator.html"><b>Translate</b></a>
+        &ensp;&ensp;&ensp;<a href="C:\Users\rakes\HTML\contactus.html"
+          ><b>Contact Us</b></a
+        >
+        &ensp;&ensp;&ensp;<a href="C:\Users\rakes\HTML\aboutus.html"
+          ><b>About Us</b></a
+        >
+        &ensp;&ensp;&ensp;<a href="C:\Users\rakes\HTML\mission.html"
+          ><b>Mission</b></a
+        >
+        &ensp;&ensp;&ensp;<button class="button" type="submit">
+          <a href="C:\Users\rakes\HTML\login.html"><b>LogIn</b></a>
+        </button>
+      </div>
+    </div>
+   
+    <div class="content1">
+      <div class="left1">
+        <p>
+          <b> TRANSLATE WITH EASE.</b> <br /><br />
+          Our state-of-the-art translation services are designed to help you
+          connect with people from all over the world, no matter what language
+          they speak. <br /><br /><button class="button1">
+            <b><a href="C:\Users\rakes\HTML\login.html">Get started</a></b>
+          </button>
+        </p>
+      </div>
+      <div class="right1">
+        <img
+          src="C:\Users\rakes\OneDrive\Books\html\website\2687ae6de31456d85a7d0b7503bc5877.jpg"
+        />
+      </div>
+    </div>
+    <div class="flip-container">
+      <div class="container1">
+        <div class="card1">
+          <div class="card1front">
+            <img
+              src="C:\Users\rakes\OneDrive\Books\html\website\a897745330c846d70e2e6b06e64ec6ee.jpg"
+              height="350px"
+              width="350px"
+            />
+          </div>
+          <div class="card1back">
+            <h1>ACCURATE TRANSLATIONS</h1>
+            <h3>
+              In today’s interconnected world, accurate translations are
+              essential for effective communication across languages and
+              cultures. Our advanced translation services ensure that your
+              message is conveyed with precision and clarity, no matter the
+              language.
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="container2">
+        <div class="card2">
+          <div class="card2front">
+            <img
+              src="C:\Users\rakes\OneDrive\Books\html\website\495343051b5e77471d6aa82a98131b14.jpg"
+              height="350px"
+              width="350px"
+            />
+          </div>
+          <div class="card2back">
+            <h1>WIDE RANGE OF LANGUAGES</h1>
+            <h3>
+              Our app is designed to bridge communication gaps by supporting a
+              wide range of languages, making it accessible to users from
+              diverse linguistic backgrounds. Whether you’re a traveler, a
+              business professional, or someone learning a new language, our app
+              ensures you can communicate effortlessly and effectively.
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="container3">
+        <div class="card3">
+          <div class="card3front">
+            <img
+              src="C:\Users\rakes\OneDrive\Books\html\website\9a7dd704a9773bc064c083ef0de954ee.jpg"
+              height="350px"
+              width="350px"
+            />
+          </div>
+          <div class="card3back">
+            <h1>USER FRIENDLY INTERFACE</h1>
+            <h3>
+              Our app is designed with a user-friendly interface to ensure a
+              seamless and intuitive experience for all users. By prioritizing
+              simplicity and consistency, we make navigation effortless,
+              allowing users to find what they need quickly and efficiently. The
+              interface is clutter-free and uses familiar design elements,
+              making it easy to understand and use from the first interaction.
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="container4">
+        <div class="card4">
+          <div class="card4front">
+            <img
+              src="C:\Users\rakes\OneDrive\Books\html\website\9a473b2f6802468c64734e9300e2d34f.jpg"
+              height="350px"
+              width="350px"
+            />
+          </div>
+          <div class="card4back">
+            <h1>SECURE AND CONFIDENTIAL</h1>
+            <h3>
+              Our app is built with security and confidentiality at its core,
+              ensuring that your data is always protected. We implement
+              industry-leading encryption standards to safeguard your
+              information, both in transit and at rest. Our robust
+              authentication mechanisms prevent unauthorized access, while
+              regular security audits and updates keep our defenses strong
+              against emerging threats.
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <div class="slide_image1"><img
+            src="C:\Users\rakes\OneDrive\Books\html\website\5af4dfe22e23d0d9432dac895e987c1b.jpg"
+            alt="Image 1" height="300px" width="300px"
+          /></div>
+          <div class="slide_text1">
+            <h1>TEXT-TO-SPEECH</h1><br><h3>
+            Our website now includes a state-of-the-art text-to-speech feature,
+            designed to enhance accessibility and user experience. This tool
+            allows users to listen to the content on our site, making it easier
+            for those with visual impairments or reading difficulties to access
+            information. Simply click the play button next to any text, and our
+            advanced speech synthesis technology will read it aloud in a clear
+            and natural voice. Whether you're multitasking, on the go, or just
+            prefer listening over reading, our text-to-speech feature ensures
+            you can stay informed and engaged with ease.
+          </h3></div>
+        </div>
+        <div class="slide">
+          <div class="slide_image2"><img
+            src="C:\Users\rakes\OneDrive\Books\html\website\d8363bacb1dceef4f870a27e2841c47c.jpg"
+            alt="Image 2" height="300px" width="300px"
+          /></div>
+          <div class="slide_text2">
+<h1>SPEECH-TO-TEXT</h1><br>
+            <h3>
+            Our website now features an advanced speech-to-text tool, designed
+            to enhance accessibility and user interaction. This feature allows
+            users to convert spoken words into written text effortlessly, making
+            it easier for those with disabilities or those who prefer speaking
+            over typing to engage with our content. Simply click the microphone
+            icon, speak into your device, and watch as your words are
+            transcribed in real-time. Whether you're dictating notes, composing
+            messages, or navigating the site, our speech-to-text feature ensures
+            a seamless and inclusive experience for all users.
+          </h3></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      let currentIndex = 0;
+
+      function show_slide(index) {
+        const offset = -index * 100; // Move to the right slide
+        document.querySelector(
+          ".slides"
+        ).style.transform = 'translateX(${offset}%)';
+      }
+
+      function next_slide() {
+        currentIndex = (currentIndex + 1) % slides.length; // Loop back to the first slide
+        show_slide(currentIndex);
+      }
+
+      setInterval(next_slide, 5000); // Change image every 2 seconds (2000ms)
+    </script>
+
+<footer class="footer">
+  <div class="footer-content">
+      <div class="footer-image">
+        <img src="C:\Users\rakes\OneDrive\Books\html\website\6adb225f-77d4-4be5-a554-e481540b65f6.jpg" height="150px" width="150px">
+      </div>
+      <div class="contact-info">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="#">echoes@gmail.com</a></p>
+          <p>Phone: 97854*</p>
+          <div class="social-icons">
+              <a href="https://facebook.com" target="_blank"><img src="https://via.placeholder.com/30x30" alt="Facebook Icon"></a>
+              <a href="https://twitter.com" target="_blank"><img src="https://via.placeholder.com/30x30" alt="Twitter Icon"></a>
+              <a href="https://instagram.com" target="_blank"><img src="https://via.placeholder.com/30x30" alt="Instagram Icon"></a>
+          </div>
+      </div>
+
+  
+      <div class="translator">
+          <h3>Translating your words, Amplifying your reach! </h3>
+          <h4>Become a member of us.</h4>
+          <form action="#" method="POST">
+              <input type="email" placeholder="Your Email" required>
+              <button type="submit">Subscribe</button>
+          </form>
+      </div>
+  </div>
+  <br><br><br><br>  <p class="footer-credit">&copy; 2024 Echoes. All rights reserved.</p>
+</footer>
+    </div>
+  </body>
+</html>
