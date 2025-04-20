@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgb(143, 179, 246), lightblue, rgb(142, 181, 239));
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 50%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 5%;
+            background-color: #007BFF;
+            color: aliceblue;
+        }
+
+        .input-group {
+            display: flex;
+            margin-bottom: 15px;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .input-group select,
+        .input-group textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .translate-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .translate-button:hover {
+            background-image: linear-gradient(blue, lightblue);
+        }
+
+        .result {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .flag-icon {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>Language Translator</h1>
+        <div class="input-group">
+            <label for="source-language">From:</label>
+            <select id="source-language">
+                <option value="en" selected><span class="fi fi-us"></span> English</option>
+                <option value="es"><span class="fi fi-es"></span> Spanish</option>
+                <option value="fr"><span class="fi fi-fr"></span> French</option>
+                <option value="de"><span class="fi fi-de"></span> German</option>
+                <option value="hi"><span class="fi fi-in"></span> Hindi</option>
+                <option value="az"><span class="fi fi-az"></span> Azerbaijani</option> <!-- New language added -->
+                <option value="bg"><span class="fi fi-bg"></span> Bulgarian</option> <!-- New language added -->
+                <option value="bn"><span class="fi fi-bd"></span> Bengali</option> <!-- New language added -->
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="target-language">To:</label>
+            <select id="target-language">
+                <option value="es"><span class="fi fi-es"></span> Spanish</option>
+                <option value="en"><span class="fi fi-us"></span> English</option>
+                <option value="fr"><span class="fi fi-fr"></span> French</option>
+                <option value="de"><span class="fi fi-de"></span> German</option>
+                <option value="hi" selected><span class="fi fi-in"></span> Hindi</option>
+                <option value="az"><span class="fi fi-az"></span> Azerbaijani</option> <!-- New language added -->
+                <option value="bg"><span class="fi fi-bg"></span> Bulgarian</option> <!-- New language added -->
+                <option value="bn"><span class="fi fi-bd"></span> Bengali</option> <!-- New language added -->
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="text-to-translate">Text:</label>
+            <textarea id="text-to-translate" rows="4" placeholder="Enter text here..."></textarea>
+        </div>
+        <button class="translate-button" onclick="translateText()">Translate</button>
+        <div class="result" id="translation-result">Translation will appear here...</div>
+        <footer>
+            Powered by Echoes
+        </footer>
+    </div>  
+    <div id="google_translate_element" style="position: fixed; top: 10px; right: 10px; z-index: 999;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en', // Default page language is English
+                includedLanguages: 'en,hi,pa,am,ar,be,bem,bi,bjs,bn,bo,br,bs', // Include English, Hindi, and Punjabi
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    
+</body>
+
+</html>
