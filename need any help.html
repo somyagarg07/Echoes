@@ -9,45 +9,81 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
+            background: linear-gradient(to bottom, #f0f4f8, #d9e8f5); /* Soft gradient background */
             color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0056b3;
             text-align: center;
+            margin-bottom: 20px;
         }
+
         h3 {
-            color: #444;
-            margin-top: 20px;
+            color: #333;
+            margin-top: 30px;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
         }
+
         p {
-            line-height: 1.6;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .contact-info, .feedback, .faq-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .contact-info {
+            border-left: 5px solid #0056b3;
+        }
+
+        .feedback {
+            border-left: 5px solid #28a745;
+        }
+
+        .faq-section {
+            border-left: 5px solid #ffc107;
+        }
+
+        ul {
+            margin-left: 20px;
             color: #555;
         }
-        .contact-info {
-            margin: 20px 0;
-            padding: 10px;
-            border: 1px dashed #007BFF;
-            background: #f9f9f9;
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
         }
-        .feedback {
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .faq-section h3 {
             margin-top: 20px;
-            padding: 10px;
-            background: #f9f9f9;
-            border: 1px solid #ccc;
+            font-size: 18px;
+            color: #333;
         }
-        .faq-section {
-            margin-top: 30px;
-            padding: 10px;
-            background: #f9f9f9;
-            border: 2px solid #ccc;
+
+        .faq-section p {
+            margin-bottom: 15px;
         }
     </style>
 </head>
